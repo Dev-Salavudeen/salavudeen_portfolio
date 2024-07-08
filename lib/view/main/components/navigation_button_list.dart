@@ -31,14 +31,14 @@ class NavigationButtonList extends StatelessWidget {
                         curve: Curves.easeIn);
                   },
                   text: 'Projects'),
-              NavigationTextButton(
-                  onTap: () {
-                    controller.animateToPage(2,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  text: 'Certifications'),
-              NavigationTextButton(onTap: () {}, text: 'Achievements'),
+              // NavigationTextButton(
+              //     onTap: () {
+              //       controller.animateToPage(2,
+              //           duration: const Duration(milliseconds: 500),
+              //           curve: Curves.easeIn);
+              //     },
+              //     text: 'Certifications'),
+              // NavigationTextButton(onTap: () {}, text: 'Achievements'),
             ],
           ),
         );

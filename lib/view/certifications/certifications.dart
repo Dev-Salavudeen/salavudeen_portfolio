@@ -18,7 +18,7 @@ class Certifications extends StatelessWidget {
           if(Responsive.isLargeMobile(context))const SizedBox(
             height: defaultPadding,
           ),
-          const TitleText(prefix: 'Certifications & ', title: 'License'),
+          // const TitleText(prefix: 'Certifications & ', title: 'License'),
           const SizedBox(
             height: defaultPadding,
           ),
