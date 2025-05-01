@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-
 import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
 
 class AnimatedImageContainer extends StatefulWidget {
-  const AnimatedImageContainer({Key? key, this.height = 300, this.width = 250})
-      : super(key: key);
+  const AnimatedImageContainer({super.key, this.height = 300, this.width = 250});
   final double? width;
   final double? height;
   @override
@@ -20,7 +18,7 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1000),
-    )..repeat(reverse: true); // Repeat the animation loop
+    )..repeat(reverse: true);
   }
   @override
   void dispose() {
@@ -34,7 +32,7 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
       builder: (context, child) {
         final value = _controller.value;
         return Transform.translate(
-          offset: Offset(0, 2 * value), // Move the container up and down
+          offset: Offset(0, 2 * value),
           child: Container(
             height: widget.height!,
             width: widget.width!,
