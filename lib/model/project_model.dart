@@ -8,6 +8,11 @@ class Project {
 
 List<Project> projectList = [
   Project(
+    'Howdy Chats',
+    'A Flutter-based all-in-one platform featuring real-time chat, voice/video calls, social feed (iFeed), and planner modules for seamless communication, content sharing, and task management.',
+    'https://play.google.com/store/apps/details?id=com.timesmed.wego',
+  ),
+  Project(
       'TutorLPT',
       "TutorLPT mobile App (Learning, Practice and Test) with a perfect blend of learning contents for Physics, Chemistry and Biology.It has been designed particularly to help NEET candidates with Competitive mode, practice questions, learn and understand concepts in easy to grasp manners", // 'assets/images/coffee.png',
       'https://play.google.com/store/apps/details?id=com.tc.lpt&hl=en'),

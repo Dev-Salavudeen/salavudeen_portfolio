@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../view model/controller.dart';
 import '../../../view model/responsive.dart';
+import '../../home/scroll_controller.dart';
 import 'navigation_button.dart';
 
 class NavigationButtonList extends StatelessWidget {
   const NavigationButtonList({super.key});
+
   @override
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
@@ -15,30 +16,23 @@ class NavigationButtonList extends StatelessWidget {
           scale: value,
           child: Row(
             children: [
+              /// ✅ HOME
               NavigationTextButton(
-                  onTap: () {
-                    controller.animateToPage(0,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  text: 'Home'),
-              if (!Responsive.isLargeMobile(context))
-                NavigationTextButton(onTap: () {}, text: 'About us'),
+                onTap: () => scrollTo(homeKey),
+                text: 'Home',
+              ),
+
+              /// ✅ PROJECTS
               NavigationTextButton(
-                  onTap: () {
-                    controller.animateToPage(1,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
-                  },
-                  text: 'Projects'),
-              // NavigationTextButton(
-              //     onTap: () {
-              //       controller.animateToPage(2,
-              //           duration: const Duration(milliseconds: 500),
-              //           curve: Curves.easeIn);
-              //     },
-              //     text: 'Certifications'),
-              // NavigationTextButton(onTap: () {}, text: 'Achievements'),
+                onTap: () => scrollTo(projectKey),
+                text: 'Projects',
+              ),
+
+              /// ✅ CONTACT
+              NavigationTextButton(
+                onTap: () => scrollTo(contactKey),
+                text: 'Contact',
+              ),
             ],
           ),
         );

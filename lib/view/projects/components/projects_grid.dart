@@ -13,6 +13,8 @@ class ProjectGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 30),
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: projectList.length,
       gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount, childAspectRatio: ratio),
